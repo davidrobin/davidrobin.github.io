@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2, 
+h4 {
+  color: #fff;
+}
+
+header {
+  min-height: 20vh;
+  background-color: green;
+}
+
+footer {
+  min-height: 10vh;
+  background-color: blue;
+}
