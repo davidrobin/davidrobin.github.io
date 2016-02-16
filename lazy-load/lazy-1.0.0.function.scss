@@ -1,0 +1,47 @@
+[data-src].fade,
+[data-src-2x].fade {
+
+  transition: 1s;
+  opacity: 0;
+
+  &.fade-img {
+
+    opacity: 1;
+
+  }
+
+}
+
+[data-bg] {
+
+  position: relative;
+  z-index: 0;
+
+  &.fade {
+
+    &:after {
+
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 1;
+      visibility: visible;
+      transition: 1s;
+
+    }
+
+    &.fade-overlay:after {
+
+      opacity: 0;
+      visibility: hidden;
+
+    }
+
+  }
+
+}

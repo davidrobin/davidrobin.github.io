@@ -1,0 +1,18 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate with tiny html5 and css3",
+  "main": "index.html",
+  "scripts": {
+    "serve": "http-server ./ -o",
+    "bs-serve": "browser-sync start --server --reload-delay 100 --files 'index.html, *css'",
+    "bs-proxy": "browser-sync start --proxy localhost:8080 --reload-delay 100 --files 'index.html, *css'",
+    "live": "npm run serve & npm run bs-proxy"
+  },
+  "author": "David ROBIN",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.1",
+    "http-server": "^0.8.5"
+  }
+}

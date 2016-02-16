@@ -146,10 +146,18 @@
   </footer>
 
   <script src="./lazy-1.0.0.function.js"></script>
+
   <script>
+
+    var googleFont = document.createElement('link');
+    googleFont.rel = 'stylesheet';
+    googleFont.href = 'https://fonts.googleapis.com/css?family=Indie+Flower';
+
     window.addEventListener('load', function() {
       lazy('.lazy');
+      document.head.appendChild(googleFont);
     });
+
   </script>
 
 </body>
