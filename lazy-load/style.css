@@ -1,5 +1,5 @@
 body {
-  font-family: 'Indie Flower', Arial, cursive;
+  font-family: Exo, Arial, sans-serif;
 }
 
 header h1, 
@@ -9,12 +9,12 @@ footer p {
 
 header {
   min-height: 20vh;
-  background-color: green;
+  background-color: #8BC34A;
 }
 
 footer {
   min-height: 10vh;
-  background-color: blue;
+  background-color: #2196F3;
 }
 
 main h2 {
