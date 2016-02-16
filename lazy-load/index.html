@@ -21,17 +21,14 @@
 
   <style>
 
-  img {
-    max-height: 250px;
-  }
+    img {
+      max-height: 250px;
+    }
 
-  .bg {
-    height: 500px;
-  }
-
-  .bg > div {
-    background-size: cover;
-  }
+    .bg > div {
+      height: 500px;
+      background-size: cover;
+    }
 
   </style>
 
@@ -103,62 +100,39 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="_100">
-        <h2>Background images with "data-bg-2x" and "data-bg" attribute and "fade" class</h2>
-      </div>
-    </div>
-
     <div class="bg container">
-      <div class="_50 lazy fade full-width-mobile centering" data-bg-2x="./img/bg-parrot@2x.jpg" data-bg="./img/bg-parrot.jpg">
-        <h3>Is it a parrot?</h3>
+      <div class="_50 lazy fade full-width-mobile align-center" data-bg-2x="./img/bg-parrot@2x.jpg" data-bg="./img/bg-parrot.jpg">
+        <h3>Background image with "data-bg-2x" and "data-bg" attribute and "fade" class</h3>
       </div>
-      <div class="_50 lazy fade full-width-mobile centering" data-bg-2x="./img/bg-coffee@2x.jpg" data-bg="./img/bg-coffee.jpg">
-        <h3>Into the Wild.</h3>
-      </div>
+      <div class="_50 lazy fade full-width-mobile align-center" data-bg="./img/bg-parrot.jpg">
+       <h3>Background image with "data-bg" attribute and "fade" class</h3>
+     </div>
+   </div>
+
+ </main>
+
+ <footer class="centering">
+  <div class="container">
+    <div class="_100">
+      <p class="align-center">Footer</p>
     </div>
+  </div>
+</footer>
 
-    <br>
+<script src="./lazy-1.0.0.function.js"></script>
 
-    <div class="container">
-      <div class="_100">
-        <h2>Background images with data-bg" attribute only and "fade" class</h2>
-      </div>
-    </div>
+<script>
 
-    <div class="bg container">
-      <div class="_50 lazy fade full-width-mobile centering" data-bg="./img/bg-parrot.jpg">
-        <h3>Is it a parrot?</h3>
-      </div>
-      <div class="_50 lazy fade full-width-mobile centering" data-bg="./img/bg-coffee.jpg">
-        <h3>Into the Wild.</h3>
-      </div>
-    </div>
+  var googleFont = document.createElement('link');
+  googleFont.rel = 'stylesheet';
+  googleFont.href = 'https://fonts.googleapis.com/css?family=Indie+Flower';
 
-  </main>
+  window.addEventListener('load', function() {
+    lazy('.lazy');
+    document.head.appendChild(googleFont);
+  });
 
-  <footer class="centering">
-    <div class="container">
-      <div class="_100">
-        <p class="align-center">Footer</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="./lazy-1.0.0.function.js"></script>
-
-  <script>
-
-    var googleFont = document.createElement('link');
-    googleFont.rel = 'stylesheet';
-    googleFont.href = 'https://fonts.googleapis.com/css?family=Indie+Flower';
-
-    window.addEventListener('load', function() {
-      lazy('.lazy');
-      document.head.appendChild(googleFont);
-    });
-
-  </script>
+</script>
 
 </body>
 
