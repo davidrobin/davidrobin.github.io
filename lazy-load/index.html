@@ -75,25 +75,25 @@
 
     <div class="container">
       <div class="_100">
-        <h2>Images with "data-src" attribute only and "fade" class</h2>
+        <h2>Images with "data-src" attribute only</h2>
       </div>
     </div>
 
     <div class="container centering no-centering-mobile">
       <div class="_33 full-width-mobile align-center">
-        <img class="lazy fade" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="./img/palmtrees.jpg">
+        <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="./img/palmtrees.jpg">
         <noscript>
           <img src="./img/palmtrees.jpg">
         </noscript>
       </div>
       <div class="_33 full-width-mobile align-center">
-        <img class="lazy fade" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="./img/coast.jpg">
+        <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="./img/coast.jpg">
         <noscript>
           <img src="./img/coast.jpg">
         </noscript>
       </div>
       <div class="_33 full-width-mobile align-center">
-        <img class="lazy fade" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="./img/house.jpg">
+        <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="./img/house.jpg">
         <noscript>
           <img src="./img/house.jpg">
         </noscript>
@@ -104,35 +104,35 @@
       <div class="_50 lazy fade full-width-mobile align-center" data-bg-2x="./img/bg-parrot@2x.jpg" data-bg="./img/bg-parrot.jpg">
         <h3>Background image with "data-bg-2x" and "data-bg" attribute and "fade" class</h3>
       </div>
-      <div class="_50 lazy fade full-width-mobile align-center" data-bg="./img/bg-parrot.jpg">
-       <h3>Background image with "data-bg" attribute and "fade" class</h3>
-     </div>
-   </div>
-
- </main>
-
- <footer class="centering">
-  <div class="container">
-    <div class="_100">
-      <p class="align-center">Footer</p>
+      <div class="_50 lazy full-width-mobile align-center" data-bg="./img/bg-parrot.jpg">
+        <h3>Background image with "data-bg" attribute only</h3>
+      </div>
     </div>
-  </div>
-</footer>
 
-<script src="./lazy-1.0.0.function.js"></script>
+  </main>
 
-<script>
+  <footer class="centering">
+    <div class="container">
+      <div class="_100">
+        <p class="align-center">Footer</p>
+      </div>
+    </div>
+  </footer>
 
-  var googleFont = document.createElement('link');
-  googleFont.rel = 'stylesheet';
-  googleFont.href = 'https://fonts.googleapis.com/css?family=Indie+Flower';
+  <script src="./lazy-1.0.0.function.js"></script>
 
-  window.addEventListener('load', function() {
-    lazy('.lazy');
-    document.head.appendChild(googleFont);
-  });
+  <script>
 
-</script>
+    var googleFont = document.createElement('link');
+    googleFont.rel = 'stylesheet';
+    googleFont.href = 'https://fonts.googleapis.com/css?family=Indie+Flower';
+
+    window.addEventListener('load', function() {
+      lazy('.lazy');
+      document.head.appendChild(googleFont);
+    });
+
+  </script>
 
 </body>
 

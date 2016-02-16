@@ -1,4 +1,4 @@
-function lazy(selector) {
+function lazy(selector, threshold) {
 
   var pixelDensity = 1.5;
 
@@ -6,6 +6,11 @@ function lazy(selector) {
 
   var lazyFadeElements = document.querySelectorAll(selector + '.fade');
 
+  if (typeof threshold === 'undefined') {
+
+    var threshold = 0;
+
+  }
 
   /* 
   FUNCTIONS
@@ -121,7 +126,7 @@ function lazy(selector) {
           // Define current Lazy Element
           lazyFadeElement = lazyFadeElements[i];
 
-          if ( lazyFadeElement.getBoundingClientRect().top <= window.innerHeight - 50 && !lazyFadeElement.classList.contains('fade-show')) {
+          if ( lazyFadeElement.getBoundingClientRect().top <= window.innerHeight - threshold && !lazyFadeElement.classList.contains('fade-show')) {
 
           // Images
           if ( lazyFadeElement.getAttribute("data-src-2x") && window.devicePixelRatio >= pixelDensity || lazyFadeElement.getAttribute("data-src") ) {
