@@ -128,8 +128,26 @@
     googleFont.href = 'https://fonts.googleapis.com/css?family=Exo';
 
     window.addEventListener('load', function() {
+
       lazy('.lazy');
+
       document.head.appendChild(googleFont);
+
+      setTimeout(function() {
+
+        var readyTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        var loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+
+        var timeBlock = document.createElement('p');
+
+        timeBlock.classList.add('align-center');
+
+        timeBlock.innerHTML = 'Ready: ' + readyTime +'ms | Load: ' + loadTime + 'ms';
+
+        document.querySelector('header .container ._100').appendChild(timeBlock);
+
+      }, 0);
+
     });
 
   </script>

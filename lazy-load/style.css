@@ -2,8 +2,8 @@ body {
   font-family: Exo, Arial, sans-serif;
 }
 
-header h1, 
-footer p {
+header, 
+footer {
   color: #fff;
 }
 
