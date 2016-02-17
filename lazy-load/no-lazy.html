@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lazy Load</title>
+
+
+  <link rel="stylesheet" href="./boilerplate.css">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="stylesheet" href="./lazy-1.0.0.function.css">
+
+  <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
+
+  <style>
+
+    img {
+      max-height: 250px;
+    }
+
+    .bg > div {
+      height: 500px;
+      background-size: cover;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header class="centering">
+    <div class="container">
+      <div class="_100">
+        <h1 class="align-center">No Lazy Load</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="container">
+      <div class="_100">
+        <h2>Images with "data-src-2x", "data-src" attribute and "fade" class</h2>
+      </div>
+    </div>
+
+    <div class="container centering no-centering-mobile">
+      <div class="_33 full-width-mobile align-center">
+          <img src="./img/palmtrees@2x.jpg">
+      </div>
+      <div class="_33 full-width-mobile align-center">
+          <img src="./img/coast@2x.jpg">
+      </div>
+      <div class="_33 full-width-mobile align-center">
+          <img src="./img/house@2x.jpg">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="_100">
+        <h2>Images with "data-src" attribute only</h2>
+      </div>
+    </div>
+
+    <div class="container centering no-centering-mobile">
+      <div class="_33 full-width-mobile align-center">
+          <img src="./img/palmtrees.jpg">
+      </div>
+      <div class="_33 full-width-mobile align-center">
+          <img src="./img/coast.jpg">
+      </div>
+      <div class="_33 full-width-mobile align-center">
+          <img src="./img/house.jpg">
+      </div>
+    </div>
+
+    <div class="bg container">
+      <div class="_50 full-width-mobile align-center" style="background-image:url('./img/bg-parrot@2x.jpg');">
+        <h3>Background image with "data-bg-2x" and "data-bg" attribute and "fade" class</h3>
+      </div>
+      <div class="_50 full-width-mobile align-center" style="background-image:url('./img/bg-parrot.jpg');">
+        <h3>Background image with "data-bg" attribute only</h3>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="centering">
+    <div class="container">
+      <div class="_100">
+        <p class="align-center">No Lazy Load</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    var googleFont = document.createElement('link');
+    googleFont.rel = 'stylesheet';
+    googleFont.href = 'https://fonts.googleapis.com/css?family=Exo';
+
+    window.addEventListener('load', function() {
+
+      document.head.appendChild(googleFont);
+
+      setTimeout(function() {
+
+        var readyTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        var loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+
+        var timeBlock = document.createElement('p');
+
+        timeBlock.classList.add('align-center');
+
+        timeBlock.innerHTML = 'Ready: ' + readyTime +'ms | Load: ' + loadTime + 'ms';
+
+        document.querySelector('header .container ._100').appendChild(timeBlock);
+
+      }, 0);
+
+    });
+
+  </script>
+
+</body>
+
+</html>
